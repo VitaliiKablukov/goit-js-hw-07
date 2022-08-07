@@ -12,15 +12,12 @@ galleryItems.forEach((elem) => {
 });
 
 gallery.addEventListener("click", (elem) => {
-  console.log(elem);
-  const elemTargetSrc = elem.target.src;
-  if (elemTargetSrc) {
-    galleryItems.forEach((elem) => {
-      if (elemTarget.src === elem.preview) {
-        const instance = basicLightbox.create(`
+  const elemTarget = elem.target;
+  galleryItems.forEach((elem) => {
+    if (elemTarget.src === elem.preview) {
+      const instance = basicLightbox.create(`
     <img src="${elem.original}">`);
-        instance.show();
-      }
-    });
-  }
+      instance.show();
+    }
+  });
 });
