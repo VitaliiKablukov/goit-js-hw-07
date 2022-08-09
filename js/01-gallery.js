@@ -44,6 +44,6 @@ function openModalWithNewPictures(elem) {
     console.log(event.code);
     if (event.code === "Escape") {
       backDropModal.remove();
-    }
+    } 
   }
 }
