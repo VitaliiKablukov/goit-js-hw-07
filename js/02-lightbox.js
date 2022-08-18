@@ -15,9 +15,3 @@ const lightBoxGallery = new SimpleLightbox(".gallery a", {
   captionsData: "alt",
   captionDelay: 250,
 });
-gallery.addEventListener("click", openModalWithNewPictures);
-//
-function openModalWithNewPictures(elem) {
-  elem.preventDefault();
-  lightBoxGallery.on("show.simplelightbox", function () {});
-}
